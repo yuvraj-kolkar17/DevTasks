@@ -18,11 +18,11 @@ func main() {
     // Setup routes
     mux := http.NewServeMux()
     
-    // API routes
+    // API routes (these should come first to have priority)
     mux.Handle("/api/todos", todoHandler)
     mux.Handle("/api/todos/", todoHandler)
     
-    // Serve static files
+    // Serve static files from ./web directory
     fs := http.FileServer(http.Dir("./static"))
     mux.Handle("/", fs)
     
