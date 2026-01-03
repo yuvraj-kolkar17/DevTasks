@@ -105,7 +105,7 @@
             text-align: center;
             width: 100%;
             max-width: 600px;
-            line-height: 1.4;
+            line-height: 1.4; 
         }
 
         /* Typed.js cursor styling */
@@ -1274,25 +1274,7 @@
             showNotification('Edit feature coming in v2.2!', 'info');
         }
 
-        // Initialize with sample data for demo (remove in production)
-        function initDemoData() {
-            if (todos.length === 0 && localStorage.getItem('devflow_demo') !== 'true') {
-                const demoData = [
-                    { id: 1, title: "Review pull request #421", completed: true, createdAt: "2024-01-15T10:30:00Z", priority: "high" },
-                    { id: 2, title: "Fix responsive layout bug on dashboard", completed: false, createdAt: "2024-01-16T14:20:00Z", priority: "medium" },
-                    { id: 3, title: "Write unit tests for auth module", completed: false, createdAt: "2024-01-17T09:15:00Z", priority: "high" },
-                    { id: 4, title: "Update project documentation", completed: true, createdAt: "2024-01-18T16:45:00Z", priority: "low" }
-                ];
-                
-                todos = demoData;
-                localStorage.setItem('devflow_demo', 'true');
-                syncToLocalStorage();
-                renderTodos();
-            }
-        }
-
-        // Initialize demo data on first load
-        window.addEventListener('load', initDemoData);
+     
     </script>
 </body>
 </html>
